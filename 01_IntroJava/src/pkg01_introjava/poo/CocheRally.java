@@ -82,15 +82,15 @@ public CocheRally(String marca) {
         
     @Override
         public void mostrarEstado() {
-        System.out.println(tipo + " : " + getMarca()
-                + ", rozamiento = " + rozamiento
-                + (isArrancado() ? " arrancado."
-                                 : " apagado."));
+        System.out.println(toString());
     }
 
     @Override
     public String toString() {
-        return "CocheRally{" + "rozamiento=" + rozamiento + '}';
+        return tipo + " : " + getMarca()
+                + ", rozamiento = " + rozamiento
+                + (isArrancado() ? " arrancado."
+                                 : " apagado.");
     }
      
 }

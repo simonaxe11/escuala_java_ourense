@@ -68,9 +68,7 @@ public class Coche extends Vehiculo {
      */
     @Override
     public void mostrarEstado(){
-        System.out.println(tipo + " - " + getMarca()
-                    + (arrancado ? " arrancado."
-                                 : " apagado."));
+        System.out.println(toString());
     }
     
     public boolean isArrancado() {
@@ -101,6 +99,13 @@ public class Coche extends Vehiculo {
     @Override
     public void avanzar() {
         System.out.println("Ruedo un poco");
+    }
+
+    @Override
+    public String toString() {
+        return tipo + " - " + getMarca()
+                    + (arrancado ? " arrancado."
+                                 : " apagado.");
     }
   
 }
