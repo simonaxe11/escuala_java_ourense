@@ -19,10 +19,7 @@ public class CocheRally extends Coche {
         super();
         rozamiento = 5f;
         tipo = TipoVehiculo.RALLY;
-       
-    public void mostrarEstado() {
-        System.out.println("Coche " + getMarca() + getTipo());
-    }
+     
 }
 
 /**
@@ -34,6 +31,7 @@ public class CocheRally extends Coche {
 public CocheRally(String marca) {
         super(marca);
         rozamiento = 5f;
+        tipo = TipoVehiculo.RALLY;
     }
 
     public CocheRally(float rozamiento, String marca) {
@@ -81,11 +79,18 @@ public CocheRally(String marca) {
     }
     // 2º que indique que es Coche de rally: <marca>, rozamiento, arrancado
 
+        
     @Override
         public void mostrarEstado() {
-        System.out.println("Coche de rally: " + getMarca()
+        System.out.println(tipo + " : " + getMarca()
                 + ", rozamiento = " + rozamiento
                 + (isArrancado() ? " arrancado."
-                        : " apagado."));
+                                 : " apagado."));
     }
+
+    @Override
+    public String toString() {
+        return "CocheRally{" + "rozamiento=" + rozamiento + '}';
+    }
+     
 }

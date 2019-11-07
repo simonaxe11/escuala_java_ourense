@@ -17,12 +17,19 @@ public abstract class Tractor extends Vehiculo {
         tipo = TipoVehiculo.TRACTOR;
     }
     
+    @Override
     public void mostrarEstado(){
-        System.out.println("Coche " + getTipo());
+        System.out.println(tipo);
     }
     
     @Override
     public void avanzar() {
         System.out.println("Ruedo y siego");
     }
+
+    @Override
+    public String toString() {
+        return "Tractor{" + '}';
+    }
+    
 }

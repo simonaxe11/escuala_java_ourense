@@ -19,9 +19,6 @@ public abstract class Vehiculo {
         return tipo;
     }
     
-    public void mostrarEstado(){
-        System.out.println("Coche " + getTipo());
-    }
     
     /**
      * Metodo declarado e implementado
@@ -31,4 +28,11 @@ public abstract class Vehiculo {
         this.tipo = tipo; //Implementacion
     }
     public abstract void avanzar(); //Declaracion
+    
+    public abstract void mostrarEstado();
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" + "tipo=" + tipo + '}';
+    }
 }

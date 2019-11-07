@@ -23,11 +23,13 @@ public class Coche extends Vehiculo {
         numRuedas = 4;
         marca = "SIN MARCA";
         this.arrancado = false;
+        tipo = TipoVehiculo.TURISMO;
     }
 
     public Coche(String marca) {
         this.marca = marca;
         this.arrancado = false;
+        tipo = TipoVehiculo.TURISMO;
     }
 
     public boolean arrancar() {
@@ -64,8 +66,9 @@ public class Coche extends Vehiculo {
     /**
      * Simplemente muestra la marca y si está arrancado
      */
+    @Override
     public void mostrarEstado(){
-        System.out.println("Coche " + getMarca()
+        System.out.println(tipo + " - " + getMarca()
                     + (arrancado ? " arrancado."
                                  : " apagado."));
     }
@@ -99,5 +102,5 @@ public class Coche extends Vehiculo {
     public void avanzar() {
         System.out.println("Ruedo un poco");
     }
-
+  
 }

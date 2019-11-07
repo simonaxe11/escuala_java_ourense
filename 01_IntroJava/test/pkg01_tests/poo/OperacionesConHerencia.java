@@ -94,6 +94,8 @@ public class OperacionesConHerencia {
         for (Vehiculo miVehiculo : misVehiculos) {
             System.out.println(" - " + miVehiculo.getTipo());
             miVehiculo.avanzar();
+            miVehiculo.mostrarEstado();
         }
+        System.out.println("*** Fin Lista ***");
     }
 }
