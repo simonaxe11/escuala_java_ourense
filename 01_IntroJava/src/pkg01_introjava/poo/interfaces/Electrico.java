@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg01_introjava.poo;
+package pkg01_introjava.poo.interfaces;
 
-/** Enumerado por defecto empieza en cero.
+/**
  *
  * @author PC
  */
-public enum TipoVehiculo {
-    TURISMO,
-    RALLY,
-    TRACTOR;   
+public interface Electrico {
+    void cargarBateria(double voltios);
 }

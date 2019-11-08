@@ -11,9 +11,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import pkg01_introjava.poo.Coche;
-import pkg01_introjava.poo.CocheRally;
-import pkg01_introjava.poo.FabricaCoches;
+import pkg01_introjava.poo.vehiculos.Coche;
+import pkg01_introjava.poo.vehiculos.CocheRally;
+import pkg01_introjava.poo.vehiculos.FabricaCoches;
 
 /**
  *

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg01_introjava.poo;
+package pkg01_introjava.poo.vehiculos;
 
 
 /**
@@ -32,4 +32,8 @@ public abstract class Tractor extends Vehiculo {
         return "Tractor{" + '}';
     }
     
+    public void mover(float m){
+        avanzar();
+        System.out.println(m + " metros");
+    }
 }

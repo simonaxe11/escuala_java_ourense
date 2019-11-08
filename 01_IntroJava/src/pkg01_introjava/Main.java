@@ -8,8 +8,8 @@ package pkg01_introjava;
 //import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import pkg01_introjava.poo.Coche;
-import pkg01_introjava.poo.FabricaCoches;
+import pkg01_introjava.poo.vehiculos.Coche;
+import pkg01_introjava.poo.vehiculos.FabricaCoches;
 
 /**
  * Clase principal del proyecto Ejemplos JAVA
