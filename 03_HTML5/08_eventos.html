@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="componente_eventos">
+        
+    </div>
+    <!--Botón y texto 1-->
+    <label>Evento con listener</label>
+    <input id="input_listo" size="100"/>
+    <input id="btn_listo" type="button" />
+    <div id="info_evento_listo"></div>
+    <br />
+    <!--Botón y  texto 2-->
+    <label>Otros eventos con listener</label>
+    <input id="input_listo2" size="100"/>
+    <input id="btn_listo2" type="button" />
+    <div id="info_evento_otro"></div>
+    <br />
+    <script>
+        var gestorEv_Listo = new GestorEventos(input_listo, btn_listo,info_evento_listo);
+        var gestorEv_Otro = new GestorEventos(input_listo2, btn_listo2, info_evento_otro);
+        //Botón 1
+        let input_listo = document.getElementById("input_listo");
+        let btn_listo = document.getElementById("btn_listo");
+        btn_listo.value = "Pulsa, listillo/a";
+        btn_listo.addEventListener("click", funCallbkAlpulsar);
+        btn_listo.addEventListener("click", funCallbkAlpulsar_dos);
+        //Botón 2
+        let input_listo2 = document.getElementById("input_listo2");
+        let btn_listo2 = document.getElementById("btn_listo2");   
+        btn_listo2.value = "Pulsa, listillo/a";
+        btn_listo2.addEventListener("click", funCallbkAlpulsar);
+        btn_listo2.addEventListener("click", funCallbkAlpulsar_dos);
+
+        function funCallbkAlpulsar(evento) {
+            input_listo.value = "Type evento: " + evento.type;
+            let info_evento = document.getElementById("info_evento");
+            evento.currentTarget.value = "Puedes repetir";
+            info_evento.innerHTML += "evento.currentTarget.id = " + evento.currentTarget.id;
+            info_evento.className = "div-marco";
+            btn_listo.removeEventListener("click", funCallbkAlpulsar);
+            btn_listo2.removeEventListener("click", funCallbkAlpulsar);
+        }
+        function funCallbkAlpulsar_dos(evento) {
+            document.getElementsByTagName("body")[0].className = "fondo-body";
+        }
+        class GestorEventos{
+            constructor(input_listo, btn_listo, info_evento_listo){
+                this.input_listo = input_listo;
+                this.btn_listo = btn_listo;
+                this.info_evento_listo = info_evento_listo;
+            }
+        }
+    </script>
+    <style>
+        .div-marco {
+            border: blue solid;
+            background-color: lightgrey;
+        }
+
+        .fondo-body {
+            background-color: lightcoral;
+        }
+    </style>
+</body>
+
+</html>
