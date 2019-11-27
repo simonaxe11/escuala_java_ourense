@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.vn.controladores;
+package com.vn.appusuarios.controladores;
 
-import com.appusuarios.modelo.ServicioUsuarios;
-import com.appusuarios.modelo.Usuario;
+import com.vn.appusuarios.modelo.logica.ServicioUsuarios;
+import com.vn.appusuarios.modelo.Usuario;
+
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.logging.*;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author PC
  */
-@WebServlet(name = "UsuariosServlet", urlPatterns = {"/usuarios.do"})
 public class UsuariosServlet extends HttpServlet {
 
     /**
@@ -40,14 +39,18 @@ public class UsuariosServlet extends HttpServlet {
         String edad = request.getParameter("edad");
 
         ServicioUsuarios srvUsu = new ServicioUsuarios();
+        srvUsu.setChivatoListener((String mensaje) -> {
+            request.getSession().setAttribute("mensajeError,", "Error al crear: " + mensaje);
+        });
 
         if (request.getMethod() == "POST") {
 
             Usuario usuario = srvUsu.crear(email, password, nombre, edad);
             if (usuario != null && usuario.getId() >= 0) {
+                request.getSession().setAttribute("emailUsuario", email);
                 request.getRequestDispatcher("registrado.jsp").forward(request, response);
-            } else {
-                response.getWriter().println("Error al crear");
+            } else{
+                request.getRequestDispatcher("registrarse.jsp").forward(request, response);
             }
         }
     }
@@ -62,6 +65,7 @@ public class UsuariosServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);

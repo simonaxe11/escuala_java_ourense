@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.appusuarios.modelo;
+package com.vn.appusuarios.modelo;
 
 /**
  *
  * @author pc
  */
 public class Usuario {
-    
+
     private int id;
     private String email;
     private String password;
@@ -25,7 +25,20 @@ public class Usuario {
         this.edad = edad;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (super.equals(obj)) {
+            return true;
+        } else {
+            if (obj == null) {
+                return false;
+            }
+            Usuario usu = (Usuario) obj;
+            return usu.getId() == this.getId() && (usu.getEmail() == null ? this.getEmail() == null
+                    : usu.getEmail().equals(this.getEmail()));
 
+        }
+    }
 
     /**
      * Get the value of edad
