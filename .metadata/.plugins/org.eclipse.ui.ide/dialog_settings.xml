@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\PC\Desktop\CURSO_JAVA_3\escuela_java_ourense.git\08_demospring"/>
+		<item value="C:\Users\PC\Desktop\CURSO_JAVA_3\escuela_java_ourense.git\07_MVN_ModeloUsuario"/>
 		<item value="C:\Users\PC\Desktop\CURSO_JAVA_3\escuela_java_ourense\07_MVN_ModeloUsuario"/>
 	</list>
 	<section name="ChooseWorkspaceDialogSettings">

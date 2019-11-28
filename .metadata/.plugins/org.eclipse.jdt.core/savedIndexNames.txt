@@ -1,9 +1,2 @@
 INDEX VERSION 1.131+C:\Users\PC\Desktop\CURSO_JAVA_3\escuela_java_ourense.git\.metadata\.plugins\org.eclipse.jdt.core
-4059191610.index
-3302796503.index
-1325917009.index
-4167467629.index
-405989135.index
-2870577172.index
-357931355.index
-1343319030.index
+4979469.index
