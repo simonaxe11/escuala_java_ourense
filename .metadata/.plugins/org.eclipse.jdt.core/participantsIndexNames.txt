@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\Users\PC\Desktop\CURSO_JAVA_3\escuela_java_ourense.git\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\869712770.index
+\07_MVN_VistaUsuarios\src\main\resources

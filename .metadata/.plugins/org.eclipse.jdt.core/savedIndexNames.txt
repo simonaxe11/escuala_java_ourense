@@ -1,0 +1,23 @@
+INDEX VERSION 1.131+C:\Users\PC\Desktop\CURSO_JAVA_3\escuela_java_ourense.git\.metadata\.plugins\org.eclipse.jdt.core
+4059191610.index
+908566163.index
+307898623.index
+405989135.index
+3946058474.index
+3149747983.index
+2642649259.index
+500797501.index
+4167467629.index
+2870577172.index
+2027763745.index
+341263954.index
+227714418.index
+206889338.index
+2815013388.index
+1909880518.index
+2388212571.index
+131997055.index
+946554455.index
+2350488526.index
+3416338475.index
+3344360607.index
