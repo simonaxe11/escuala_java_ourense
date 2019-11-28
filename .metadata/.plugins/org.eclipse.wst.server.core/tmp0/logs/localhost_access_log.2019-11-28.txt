@@ -26,3 +26,6 @@
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:12:48:14 +0100] "GET /07_MVN_VistaUsuarios/listar.jsp HTTP/1.1" 200 4336
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:12:50:59 +0100] "POST /07_MVN_VistaUsuarios/usuarios.do HTTP/1.1" 200 1674
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:12:51:25 +0100] "POST /07_MVN_VistaUsuarios/usuarios.do HTTP/1.1" 200 1674
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:13:11:04 +0100] "GET /07_MVN_VistaUsuarios/listar.jsp HTTP/1.1" 200 4336
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:13:11:04 +0100] "GET /favicon.ico HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:13:11:23 +0100] "GET /07_MVN_VistaUsuarios/index.jsp HTTP/1.1" 200 1250
