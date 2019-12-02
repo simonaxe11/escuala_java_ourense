@@ -22,12 +22,11 @@ export class NuevaCuentaComponent implements OnInit {
     this.cuenta = new CuentaBanc(0, "", "");
   }
   crearCuenta(): void{
-    let observador: Observable<CuentaBanc>;
-    observador = this.srvCuentasRest.add(this.cuenta);
-    observador.subscribe((objNoSexual) => {
-      console.log("Datos: " + objNoSexual.toString["iban"]);
+    let observable: Observable<CuentaBanc>;
+    observable = this.srvCuentasRest.add(this.cuenta, (objNoSexual) =>{
+      console.log("Datos: " + objNoSexual["iban"]);
       this.recibido = true;
-    })
+    });
     console.log(this.cuenta.toString());
   }
 }
